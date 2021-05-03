@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AMUSEMENT PARK</title>
+
+    <link rel="stylesheet" href="informal.css">
+    <script src="informal.js" defer></script>
+  </head>
+
+  <body onload="get()">
+
+      <div id="theme"><h2>select theme color!</h2>
+
+        <button id="button">Switch Color</button>
+        <script type="text/javascript">
+          var color = ["#ffe5b4","#f9966b","#e8adaa","#f778a1","#9e7bff","#e3e4fa3"];
+          var i = 0;
+          document.getElementById("button").addEventListener("click",function(){
+            i = i < color.length ? ++i : 0;
+            document.getElementById("result").style.background = color[i]
+          })
+        </script>
+      </div>
+
+            <div id="typein"><h2>type here</h2>
+
+              <input class="typein1" type="text" id="txt"  name="txt" onclick="this.value ='' "/>
+              <input class="typein2" type="text" id="txt3" name="txt3" onclick="this.value ='' "/>
+              <input class="typein3" type="text" id="txt5" name="txt5" onclick="this.value ='' "/>
+              <input class="typein4" type="text" id="txt7" name="txt7" onclick="this.value ='' "/>
+              <input class="typein5" type="text" id="txt9" name="txt9" onclick="this.value ='' "/>
+
+              <button onclick="getAndSetValue();">ENTER</button>
+
+            </div>
+
+                  <div id="result"> <h2> create card!</h2>
+
+                    <input class="result1" type="text" id="txt2" name="txt2" onclick="this.value ='' "/ >
+                    <input class="result2" type="text" id="txt4" name="txt4" onclick="this.value ='' "/ >
+                    <input class="result3" type="text" id="txt6" name="txt6" onclick="this.value ='' "/ >
+                    <input class="result4" type="text" id="txt8" name="txt8" onclick="this.value ='' "/ >
+                    <input class="result5" type="text" id="txt10" name="txt10" onclick="this.value ='' "/>
+                    <p id="savedText"> </p>
+                    <p id="openedText"> </p>
+                    <input type="text" id="input"/>
+                    <button onclick="save()"> SAVE </button>
+
+                  </div>
+                 <img src="parks.jpg"></img>
+  </body>
+</html>

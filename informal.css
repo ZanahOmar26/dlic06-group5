@@ -1,0 +1,201 @@
+body {
+  background-color: #addfff;
+  margin: 0;
+  height: 100vh;
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+#typein {
+  background: #9172ec;
+  width: 20%;
+  height: 300px;
+  border: 2px solid black;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  padding:20px;
+  margin:20px;
+}
+
+#theme {
+  background: #48cccd;
+  width: 20%;
+  height: 300px;
+  border: 2px solid black;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  padding:20px;
+  margin:20px;
+}
+
+#result {
+  background: #6698ff;
+  width: 30%;
+  height: 750px;
+  border: 2px solid black;
+  position: absolute;
+  left:47%;
+  top: 10%;
+  padding:20px;
+  margin:20px;
+}
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.result1 {
+  background: #6698ff;
+  position:absolute;
+  left: 30%;
+  top: 7.5%;
+  border: #6698ff;
+  font-size: 170%;
+}
+
+.result2 {
+  background: #6698ff;
+  position:absolute;
+  left: 30%;
+  top: 25.5%;
+  border: #6698ff;
+  font-size: 150%;
+}
+
+.result3 {
+  background: #6698ff;
+  position:absolute;
+  left: 30%;
+  top: 45%;
+  border: #6698ff;
+  font-size: 150%;
+}
+
+.result4 {
+  background: #6698ff;
+  position:absolute;
+  left: 30%;
+  top: 67.5%;
+  border: #6698ff;
+  font-size: 150%;
+}
+
+.result5 {
+  background: #6698ff;
+  position:absolute;
+  left: 30%;
+  top: 90%;
+  border: #6698ff;
+}
+
+.typein1 {
+  background: #9172ec;
+  position:absolute;
+  left: 30%;
+  top: 15%;
+}
+
+.typein2 {
+  background: #9172ec;
+  position:absolute;
+  left: 30%;
+  top: 30%;
+}
+
+.typein3 {
+  background: #9172ec;
+  position:absolute;
+  left: 30%;
+  top: 50%;
+}
+
+.typein4 {
+  background: #9172ec;
+  position:absolute;
+  left: 30%;
+  top: 70%;
+}
+
+.typein5 {
+  background: #9172ec;
+  position:absolute;
+  left: 30%;
+  top: 90%;
+
+}
+
+button {
+  position:absolute;
+  left: 90%;
+  top: 90%;
+}
+
+#input {
+  background: #6698ff;
+  position: absolute;
+  top: 90%;
+  left:65%;
+}
+
+#savedText {
+  position: absolute;
+  top: 93%;
+  left: 65%;
+}
+
+#openedText {
+  position: absolute;
+  top: 85%;
+  left:65%;
+}
+
+#button {
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+  background: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  text-transform: unset;
+  cursor: pointer;
+}
+
+#txt2 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#txt4 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#txt6 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#txt8 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#txt10 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+img {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 200px;
+  height: 80px;
+}

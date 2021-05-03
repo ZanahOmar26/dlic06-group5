@@ -1,0 +1,168 @@
+    <!DOCTYPE html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" type="text/css" href="weddingstyle.css">
+
+    <!--JS DRAG N DROP SECTION-->
+     <script type="text/javascript">
+       function allowDrop(ev) {
+        ev.preventDefault();
+       }
+
+       function drag(ev) {
+        ev.dataTransfer.setData("text",ev.target.id);
+       }
+
+       function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+       }
+     </script>
+
+     <!--PREVIEW IN JS-->
+     
+
+<!--SAVE FUNCTION-->
+<script type="text/javascript">
+  
+  function savefunction(){
+    var weddingopeningchoice = document.getElementById("weddingopeningchoice").value;
+    var couplename = document.getElementById("couplenameoutputdisplay").value;
+    var date = document.getElementById("dateoutputdisplay").value;
+    var time = document.getElementById("timeoutputdisplay").value;
+    var address = document.getElementById("addressoutputdisplay").value;
+
+    var weddingopeningchoice = document.getElementById("weddingopeningchoice");
+    weddingopeningchoice.innerHTML = weddingopeningchoice;
+    var couplename = document.getElementById("couplename");
+    couplenameoutput.innerHTML = couplenameoutput;
+    var date = document.getElementById("date");
+    dateoutputdisplay.innerHTML = dateoutputdisplay;
+    var time = document.getElementById("time");
+    timeoutputdisplay.innerHTML = timeoutputdisplay;
+    var addressoutput = document.getElementById("address");
+    addressoutputdisplay.innerHTML = addressoutputdisplay;
+
+      localStorage.setItem("Wedding Opening:", weddingopeningchoice );
+      localStorage.setItem("Couple Name:", couplename);
+      localStorage.setItem("Date:", date);
+      localStorage.setItem("Time:", time);
+      localStorage.setItem("Address:", address);
+  }
+</script>
+   
+     
+    </head>
+
+    <body>
+
+      <!--WEDDING DETAILS INPUT FORM-->
+      <div id="box">
+
+<p id="text"><b> Wedding Details </b></p>
+
+<form>
+<label class="element" id="weddingopening">Wedding Opening:</label>
+      <select>
+        <option>Join the journey of two lovebirds</option>
+        <option>The Wedding Of</option>
+        <option>Together With Their Families</option>
+        <option>You are invited to the wedding of</option>
+      </select><br/><br/>
+
+      <label class="element" id="couplename">Couple's Names:</label>
+      <input id="couplenameoutput" type="text" placeholder="Enter Couple Name Here" min="10"/><br/><br/>
+
+      <label class="element" id="date"> Date </label>
+      <input id="dateoutput" type="Date" placeholder="Enter Date Here" min="10"/><br/><br/>
+
+      <label class="element" id="time"> Time </label>
+      <input id="timeoutput" type="text" placeholder="Enter Time Here" min="10"/><br/><br/>
+
+
+      <label class="element" id="address">Address:</label>
+      <textarea id="addressoutput" rows="3" cols="30" placeholder="Full Address"></textarea><br/><br/>
+
+      <button onclick="myFunction()">Submit</button>
+
+    </form>
+     </div>
+     <br>
+
+     <!--DRAG N DROP SECTION-->
+     <div class="dragimg">
+       <h1>Drag & Design Your Own Card!</h1>
+       <div id="img1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="100">
+
+        <div id="img2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img2.png" draggable="true" ondragstart="drag(event)" id="drag2" width="200" height="100">
+
+        <div id="img3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img3.png" draggable="true" ondragstart="drag(event)" id="drag3" width="200" height="100">
+
+        <div id="img4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img4.png" draggable="true" ondragstart="drag(event)" id="drag4" width="200" height="100">
+
+        <div id="img5" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img5.png" draggable="true" ondragstart="drag(event)" id="drag5" width="200" height="100">
+
+        <div id="img6" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img6.png" draggable="true" ondragstart="drag(event)" id="drag6" width="200" height="100">
+     </div>
+
+     <!--PREVIEW DISPLAY-->
+
+<div id="cardbox">
+  <div><p id="weddingopeningchoice" class="output"></p></div>
+  
+  <div><h1 id="couplenamedisplay" class="output"></h1></div>
+
+  <div><p id="dateoutputdisplay" class="output"></p></div>
+
+  <div><p id="timeoutputdisplay" class="output"></p></div>
+
+  <div><p id="addressoutputdisplay" class="output"></p></div>
+  
+</div>
+
+     <!--PREVIEW DISPLAY IN JS-->
+
+ <script type=  "text/javascript">
+        function myFunction() {
+
+    var mylist = document.getElementById("weddingopening");document.getElementById("weddingopeningchoice").value = weddingopening.Join the journey of two lovebirds[mylist.selectedIndex].text;
+ weddingopening.The Wedding of[mylist.selectedIndex].text;
+  weddingopening.Together With Their families[mylist.selectedIndex].text;
+   weddingopening.You are invited to the wedding of[mylist.selectedIndex].text;
+
+var a = document.getElementById("couplenamedisplay").value;
+    document.getElementById("couplenameoutputdisplay").innerHTML = a;
+
+var b = document.getElementById("dateoutput").value;
+    document.getElementById("dateoutputdisplay").innerHTML = b;
+
+ var c = document.getElementById("timeoutput").value;
+    document.getElementById("timeoutputdisplay").innerHTML = c;
+
+  var d = document.getElementById("addressoutput").value;
+    document.getElementById("addressoutputdisplay").innerHTML = d;
+   }
+
+</script>
+
+
+
+<!--SAVE FUNCTION BUTTON-->
+
+<div class="button">
+  <button onclick="savefunction()" type="submit" name="save">Save</button>
+</div>
+
+
+
+ </body>
+ </html>

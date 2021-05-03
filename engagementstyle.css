@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: url(bgimg3.jpg) no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 530px;
+	border: 5px;
+	display: inline-block;
+	font-family: Calibri, Cambria, Arial, Verdana;
+}
+
+.element {
+	width: 200px;
+	vertical-align: middle;
+}
+
+.subelement {
+	width: 50px;
+}
+
+#button1 {
+	width: 100px;
+	height: 35px;
+	font-size: 16px;
+}
+
+a {
+	vertical-align: center;
+	padding-right: 20px;
+	color: #6Db307;
+}
+
+#box {width: 400px;
+    height: 360px;
+    margin: 0 auto;
+    border-color: #e7e7fb;
+    border: 5px  #e7e7fb;
+    background-color: #f5f5dc;
+    padding-top: 20px;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 0 20px #000000b3;
+	font-family: "Monsterrat", "sans-serif";
+    padding-left: 15px;
+    left: 400px;
+        }
+
+#cardpreview {width: 600px;
+       height: 630px;
+       margin: 0 auto;
+         float: left;
+        border: 5px double #e7e7fb;
+        background-color: #f5f5dc;
+	padding: 30px 40px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 0 20px #000000b3;
+	font-family: "Monsterrat", "sans-serif";
+    padding-left: 15px;
+    left:700px;
+    top: -300px;
+        }
+
+#cardbox{width: 600px;
+    height: 630px;
+    margin: 0 auto;
+    float: right;
+    border: 5px double #e7e7fb;
+    background-color: #f5f5dc;
+	padding: 30px 40px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 0 20px #000000b3;
+	font-family: "Monsterrat", "sans-serif";
+    padding-left: 15px;
+    right: 100px;
+    left:700px;
+    position: relative;
+    top: -1100px;
+    z-index: -1;
+        }
+
+#couplenamedisplay {
+	color: black;
+}
+
+.dragimg{
+	font-family: Bodoni FLF;
+	width: 400px;
+    height: 830px;
+    margin: 0 auto;
+    border-color: #e7e7fb;
+    border: 5px  #e7e7fb;
+    background-color: #f5f5dc;
+	padding: 30px 40px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 0 20px #000000b3;
+    padding-left: 15px;
+    left: 400px;
+}
+

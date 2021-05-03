@@ -1,0 +1,134 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #fff8dc;
+}
+table {
+  border-spacing: 0;
+}
+td {
+  padding: 0;
+}
+img {
+  border:0;
+}
+
+.wrapper {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #f6f9fc;
+  padding-bottom: 40px;
+
+}
+
+.webkit {
+  max-width: 600px;
+  background-color: #ffffff;
+
+}
+
+.outer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  border-spacing: 0;
+  font-family: sans-serif;
+  color: #4a4a4a;
+}
+
+@media screen and (max-width: 600px){
+
+}
+@media sreen and (max-width: 400px){
+
+}
+
+#img1 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+#img2 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+#img3 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+#img4 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+#img5 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+#img6 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: #c3fdb8;
+  background-size: cover;
+  background-size: 800px 800px;
+  position: relative;
+  height: 800px;
+  width: 800px;
+  top: 5px;
+  left: 5px;
+
+}
+
+#drag1 {
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  background-color: #fff380;
+  position: absolute;
+  top: 10%;
+  left: 37%;
+  border: dashed;
+}
+
+#drag2 {
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  left: 5px;
+  background-color: #fff380;
+  position: absolute;
+  top: 60%;
+  left: 37%;
+  border: dashed;
+}

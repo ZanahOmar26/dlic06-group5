@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Workshop</title>
+    <link rel="stylesheet" type="text/css" href="secondecard.css"></link>
+
+    <!--JS FOR DRAG AND DROP PNG-->
+    <script type="text/javascript">
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+
+    </script>
+  </head>
+  <body>
+
+    <div class="row">
+      <h1 id="header">Join Our Workshop!</h1>
+    </div>
+
+      <form> <!--FIRST FORM-->
+      <div class="row">
+        <label for="name">Name: </label>
+        <input class="card" id="name" type="text" placeholder="Enter Your Name Here"/><br>
+
+        <label for="email">Email: </label>
+        <input class="card" id="email" type="email" placeholder="Enter Your Email Here"/><br>
+
+        <label for="phone">Phone No.: </label>
+        <input class="card" id="phone" type="text" pattern="[0-9]{7}" placeholder="Phone Number(+673)"/><br>
+    </div>
+
+
+    <hr>
+
+    <div class="secrow"> <!--2ND FORM-->
+
+        <label for="date">Day/Date Of The Event: </label>
+        <input class="card-2" id="date" type="date" placeholder="Day/Date Of The Event"/><br>
+
+        <label for="address">Address: </label>
+        <input class="card-2" id="address" type="text" placeholder="Event's Address"/><br>
+
+      <button onclick="myFunction()" type="button" name="Preview">Preview</button>
+    </div>
+    </form>
+
+
+
+    <section>
+      <!--DRAG AND DROP PNG-->
+      <div class="draggableimg">
+        <h1>Draggable Images</h1>
+        <div id="img1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="png2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="100">
+        </div>
+
+        <div id="img2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="bronze.png" draggable="true" ondragstart="drag(event)" id="drag2" width="300" height="100">
+        </div>
+
+        <div id="img3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="youre.png" draggable="true" ondragstart="drag(event)" id="drag3" width="300" height="100">
+        </div>
+
+        <div id="img4" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="joinus.png" draggable="true" ondragstart="drag(event)" id="drag4" width="200" height="150">
+        </div>
+
+        <div id="img5" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="png4.png" draggable="true" ondragstart="drag(event)" id="drag5" width="200" height="200">
+        </div>
+      </div>
+
+
+      <!--PREVIEW-->
+      <div class="boxed" style="width:530px;height:530px;border: 10px solid white;border-radius:5px;">
+
+        <div class="outputOne">
+          <h3 id="nameoutput"></h3>
+          <p id="emailoutput"></p>
+          <p id="pnoutput"></p>
+        </div>
+
+      <div class="invitation">
+        <!--drop image--> <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:auto;height:auto;border:2px solid transparent;"></div>
+        <h3>@</h3>
+        <h3 id="daydateoutput"></h3>
+
+        <h3 id="addressoutput"></h3>
+      </div>
+
+      </div>
+      <div class="button">
+        <button onclick="saveFunction()" type="submit" name="save">Save</button>
+      </div>
+    </section>
+
+    <!--JS FOR PREVIEW-->
+    <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("name").value;
+      document.getElementById("nameoutput").innerHTML = x;
+
+      var x = document.getElementById("email").value;
+      document.getElementById("emailoutput").innerHTML = x;
+
+      var x = document.getElementById("phone").value;
+      document.getElementById("pnoutput").innerHTML = x;
+
+      var x = document.getElementById("date").value;
+      document.getElementById("daydateoutput").innerHTML = x;
+
+      var x = document.getElementById("address").value;
+      document.getElementById("addressoutput").innerHTML = x;
+
+      }
+
+    function saveFunction() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var date = document.getElementById("date").value;
+      var address = document.getElementById("address").value;
+
+      var nameoutput = document.getElementById("name");
+      nameoutput.innerHTML = nameoutput;
+      var emailoutput = document.getElementById("email");
+      emailoutput.innerHTML = emailoutput;
+      var pnoutput = document.getElementById("phone");
+      pnoutput.innerHTML = pnoutput;
+      var daydateoutput = document.getElementById("date");
+      daydateoutput.innerHTML = daydateoutput;
+      var addressoutput = document.getElementById("address");
+      addressoutput.innerHTML = addressoutput;
+
+        localStorage.setItem("Name: ", name);
+        localStorage.setItem("Email: ", email);
+        localStorage.setItem("Phone No.: ", phone);
+        localStorage.setItem("Day/Date Of The Event: ", date);
+        localStorage.setItem("Address: ", address);
+
+      }
+
+    </script>
+  </body>
+</html>

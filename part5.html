@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Meeting Template</title>
+    <link rel="stylesheet" href="part5.css"></link>
+  </head>
+  <body>
+    <h1>Annual Meeting Invitation Template</h1>
+
+    <hr>
+
+
+    <div class="card">
+
+<!--form input-->
+      <div class="details">
+        <h2>Edit Details</h2>
+
+        <label for="company">Company Name: </label>
+        <input id="company" class="input" type="text" placeholder="Company Name"/><br>
+
+        <label for="daydate">Day/Date: </label>
+        <input id="daydate" class="input" type="date"/><br>
+
+        <label for="time">Time: </label>
+        <input id="time" class="input" type="text" placeholder="Time 00:00 - 00:00"/><br>
+
+        <label for="address">Address: </label>
+        <input id="address" class="input" type="text" placeholder="Full Address"/><br>
+
+        <button onclick="previewFunction()" type="button" name="button"> Preview </button>
+
+      </div>
+
+      <div id="dragdrop">
+        <h2>Draggable Images</h2>
+          <div id="img1" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="image1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="300" height="55">
+          </div>
+
+          <div id="img2" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="image2.jpg" draggable="true" ondragstart="drag(event)" id="drag2" width="300" height="55">
+          </div>
+
+          <div id="img3" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="image3.jpg" draggable="true" ondragstart="drag(event)" id="drag3" width="300" height="55">
+          </div>
+
+          <div id="img4" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="image4.jpg" draggable="true" ondragstart="drag(event)" id="drag4" width="300" height="55">
+          </div>
+      </div>
+
+      <!--preview column-->
+      <section>
+        <div class="preview">
+          <!--drop image--> <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:300px;height:55px;border:2px solid white;"></div>
+
+          <div class="texts">
+            <div id="cnprev"><h2 id="company2" class="output"></h2></div>
+
+            <div id="dayprev"><h3 id="daydate2" class="output"></h3></div>
+
+            <div id="timeprev"><h3 id="time2" class="output"></h3></div>
+
+            <div id="addprev"><h3 id="address2" class="output"></h3></div>
+          </div>
+
+        </div>
+        <div class="button">
+          <button onclick="favouriteFunction()" type="submit" name="save"> Save </button>
+        </div>
+
+      </section>
+
+    </div>
+
+<!--javascript preview-->
+<!--javascript drag and drop-->
+    <script type="text/javascript">
+      function previewFunction(){
+        var cn = document.getElementById("company").value;
+        document.getElementById("company2").innerHTML = cn;
+
+        var dd = document.getElementById("daydate").value;
+        document.getElementById("daydate2").innerHTML = dd;
+
+        var t = document.getElementById("time").value;
+        document.getElementById("time2").innerHTML = t;
+
+        var add = document.getElementById("address").value;
+        document.getElementById("address2").innerHTML = add;
+      }
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+
+      function favouriteFunction(){
+        var company = document.getElementById("company").value;
+        var daydate = document.getElementById("daydate").value;
+        var time = document.getElementById("time").value;
+        var address = document.getElementById("address").value;
+
+        var cnprev = document.getElementById("company").value;
+        cnprev.innerHTML = cnprev;
+        var dayprev = document.getElementById("daydate").value;
+        dayprev.innerHTML = dayprev;
+        var timeprev = document.getElementById("time").value;
+        timeprev.innerHTML = timeprev;
+        var addprev = document.getElementById("address").value;
+        addprev.innerHTML = addprev;
+      }
+
+    </script>
+  </body>
+</html>
